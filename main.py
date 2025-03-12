@@ -15,7 +15,7 @@ password = os.getenv("EMAIL_PASSWORD")
 
 interval = int(os.getenv("INTERVAL"))
 
-receiver = ["mateusz.gajda.101@gmail.com"]
+receiver = [""]
 
 if __name__ == "__main__":
     connection = DeviceControl(api_url, api_id, api_key)
