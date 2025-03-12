@@ -97,11 +97,9 @@ class DeviceControl:
 
         with open('violations.json', 'r') as file:
             violations = json.load(file)
-        print(violations)
+
         for violation in violations:
             data.append({"violation_id": violation["violation_id"], "hostname": violation["hostname"], "username": violation["username"]})
-
-        print(data)
         
         template = Template(html_template)
         html_report = template.render(date=datetime.now().strftime("%Y-%m-%d %H:%M:%S"), data=data)
